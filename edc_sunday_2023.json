@@ -1,0 +1,407 @@
+{
+  "Kaskade Redux": {
+    "stage": "Kinetic Field",
+    "start-time": "04:16 AM",
+    "end-time": "05:28 AM"
+  },
+  "SLANDER": {
+    "stage": "Kinetic Field",
+    "start-time": "03:03 AM",
+    "end-time": "04:13 AM"
+  },
+  "Armin van Buuren": {
+    "stage": "Kinetic Field",
+    "start-time": "01:45 AM",
+    "end-time": "03:00 AM"
+  },
+  "Fireworks": {
+    "stage": "Kinetic Field",
+    "start-time": "01:39 AM",
+    "end-time": "01:45 AM"
+  },
+  "Martin Garrix": {
+    "stage": "Kinetic Field",
+    "start-time": "12:29 AM",
+    "end-time": "01:39 AM"
+  },
+  "Loud Luxury": {
+    "stage": "Kinetic Field",
+    "start-time": "11:19 PM",
+    "end-time": "12:24 AM"
+  },
+  "Gareth Emery": {
+    "stage": "Kinetic Field",
+    "start-time": "10:16 PM",
+    "end-time": "11:16 PM"
+  },
+  "Dombresky": {
+    "stage": "Kinetic Field",
+    "start-time": "09:05 PM",
+    "end-time": "10:10 PM"
+  },
+  "Ship Wrek": {
+    "stage": "Kinetic Field",
+    "start-time": "08:00 PM",
+    "end-time": "09:05 PM"
+  },
+  "Marten Hørger": {
+    "stage": "Kinetic Field",
+    "start-time": "07:00 PM",
+    "end-time": "08:00 PM"
+  },
+  "Boogie T B2B Dirt Monkey": {
+    "stage": "Cosmic Meadow",
+    "start-time": "04:15 AM",
+    "end-time": "05:30 AM"
+  },
+  "Sonny Fodera": {
+    "stage": "Cosmic Meadow",
+    "start-time": "03:00 AM",
+    "end-time": "04:15 AM"
+  },
+  "Wax Motif": {
+    "stage": "Cosmic Meadow",
+    "start-time": "01:30 AM",
+    "end-time": "03:00 AM"
+  },
+  "Tchami B2B AC Slater": {
+    "stage": "Cosmic Meadow",
+    "start-time": "12:00 AM",
+    "end-time": "01:30 AM"
+  },
+  "Chris Lorenzo": {
+    "stage": "Cosmic Meadow",
+    "start-time": "10:45 PM",
+    "end-time": "12:00 AM"
+  },
+  "J. Worra": {
+    "stage": "Cosmic Meadow",
+    "start-time": "09:30 PM",
+    "end-time": "10:45 PM"
+  },
+  "Capozzi": {
+    "stage": "Cosmic Meadow",
+    "start-time": "08:30 PM",
+    "end-time": "09:30 PM"
+  },
+  "TOBEHONEST": {
+    "stage": "Cosmic Meadow",
+    "start-time": "07:00 PM",
+    "end-time": "08:30 PM"
+  },
+  "SAYMYNAME": {
+    "stage": "Circuit Grounds",
+    "start-time": "04:00 AM",
+    "end-time": "05:30 AM"
+  },
+  "Yellow Claw": {
+    "stage": "Circuit Grounds",
+    "start-time": "02:45 AM",
+    "end-time": "04:00 AM"
+  },
+  "Excision": {
+    "stage": "Circuit Grounds",
+    "start-time": "01:30 AM",
+    "end-time": "02:45 AM"
+  },
+  "Marshmello B2B Svdden Death": {
+    "stage": "Circuit Grounds",
+    "start-time": "12:15 AM",
+    "end-time": "01:30 AM"
+  },
+  "Deorro": {
+    "stage": "Circuit Grounds",
+    "start-time": "11:00 PM",
+    "end-time": "12:15 AM"
+  },
+  "Peekaboo": {
+    "stage": "Circuit Grounds",
+    "start-time": "09:45 PM",
+    "end-time": "11:00 PM"
+  },
+  "Blanke": {
+    "stage": "Circuit Grounds",
+    "start-time": "08:30 PM",
+    "end-time": "09:45 PM"
+  },
+  "Tsu Nami": {
+    "stage": "Circuit Grounds",
+    "start-time": "07:00 PM",
+    "end-time": "08:30 PM"
+  },
+"999999999": {
+    "stage": "Neon Garden",
+    "start-time": "04:00 AM",
+    "end-time": "05:30 AM"
+  },
+  "Reinier Zonneveld (Live)": {
+    "stage": "Neon Garden",
+    "start-time": "02:30 AM",
+    "end-time": "04:00 AM"
+  },
+  "I Hate Models": {
+    "stage": "Neon Garden",
+    "start-time": "01:00 AM",
+    "end-time": "02:30 AM"
+  },
+  "Jeff Mills": {
+    "stage": "Neon Garden",
+    "start-time": "11:30 PM",
+    "end-time": "01:00 AM"
+  },
+  "Will Clarke": {
+    "stage": "Neon Garden",
+    "start-time": "10:00 PM",
+    "end-time": "11:30 PM"
+  },
+  "Ellen Allien": {
+    "stage": "Neon Garden",
+    "start-time": "08:30 PM",
+    "end-time": "10:00 PM"
+  },
+  "Frame (Declan James & Decoder)": {
+    "stage": "Neon Garden",
+    "start-time": "07:00 PM",
+    "end-time": "08:30 PM"
+  },
+    "Gentlemens Club": {
+    "stage": "Basspod",
+    "start-time": "04:30 AM",
+    "end-time": "05:30 AM"
+  },
+  "Midnight Tyrannosaurus": {
+    "stage": "Basspod",
+    "start-time": "03:30 AM",
+    "end-time": "04:30 AM"
+  },
+  "Black Tiger Sex Machine": {
+    "stage": "Basspod",
+    "start-time": "02:25 AM",
+    "end-time": "03:25 AM"
+  },
+  "Dimension": {
+    "stage": "Basspod",
+    "start-time": "01:20 AM",
+    "end-time": "02:20 AM"
+  },
+  "Griztronics": {
+    "stage": "Basspod",
+    "start-time": "12:20 AM",
+    "end-time": "01:20 AM"
+  },
+  "Boogie T": {
+    "stage": "Basspod",
+    "start-time": "11:20 PM",
+    "end-time": "12:20 AM"
+  },
+  "Borgore B2B Level Up": {
+    "stage": "Basspod",
+    "start-time": "10:20 PM",
+    "end-time": "11:20 PM"
+  },
+  "IMANU": {
+    "stage": "Basspod",
+    "start-time": "09:20 PM",
+    "end-time": "10:20 PM"
+  },
+  "HOL!": {
+    "stage": "Basspod",
+    "start-time": "08:30 PM",
+    "end-time": "09:20 PM"
+  },
+  "A Hundred Drums": {
+    "stage": "Basspod",
+    "start-time": "07:40 PM",
+    "end-time": "08:30 PM"
+  },
+  "Bensley B2B Justin Hawkes": {
+    "stage": "Basspod",
+    "start-time": "07:00 PM",
+    "end-time": "07:40 PM"
+  },
+  "Levenkhan": {
+    "stage": "Wasteland",
+    "start-time": "04:30 AM",
+    "end-time": "05:30 AM"
+  },
+  "Deadly Guns": {
+    "stage": "Wasteland",
+    "start-time": "03:30 AM",
+    "end-time": "04:30 AM"
+  },
+  "Gammer B2B Tweekacore": {
+    "stage": "Wasteland",
+    "start-time": "02:30 AM",
+    "end-time": "03:30 AM"
+  },
+  "Ben Nicky presents Xtreme B2B Sub Zero Project": {
+    "stage": "Wasteland",
+    "start-time": "01:30 AM",
+    "end-time": "02:30 AM"
+  },
+  "Brennan Heart": {
+    "stage": "Wasteland",
+    "start-time": "12:30 AM",
+    "end-time": "01:30 AM"
+  },
+  "Code Black": {
+    "stage": "Wasteland",
+    "start-time": "11:30 PM",
+    "end-time": "12:30 AM"
+  },
+  "Adrenalize": {
+    "stage": "Wasteland",
+    "start-time": "10:30 PM",
+    "end-time": "11:30 PM"
+  },
+  "D-Sturb": {
+    "stage": "Wasteland",
+    "start-time": "09:30 PM",
+    "end-time": "10:30 PM"
+  },
+  "Rob Gee 30 Years": {
+    "stage": "Wasteland",
+    "start-time": "09:00 PM",
+    "end-time": "09:30 PM"
+  },
+  "SOREN": {
+    "stage": "Wasteland",
+    "start-time": "08:00 PM",
+    "end-time": "09:00 PM"
+  },
+  "Mrotek": {
+    "stage": "Wasteland",
+    "start-time": "07:00 PM",
+    "end-time": "08:00 PM"
+  },
+  "Space Motion": {
+    "stage": "Quantum Valley",
+    "start-time": "04:30 AM",
+    "end-time": "05:30 AM"
+  },
+  "Township Rebellion": {
+    "stage": "Quantum Valley",
+    "start-time": "03:30 AM",
+    "end-time": "04:30 AM"
+  },
+  "Franky Wah": {
+    "stage": "Quantum Valley",
+    "start-time": "02:15 AM",
+    "end-time": "03:30 AM"
+  },
+  "Sultan + Shepard": {
+    "stage": "Quantum Valley",
+    "start-time": "01:00 AM",
+    "end-time": "02:15 AM"
+  },
+  "Yotto": {
+    "stage": "Quantum Valley",
+    "start-time": "12:00 AM",
+    "end-time": "01:00 AM"
+  },
+  "Lane 8": {
+    "stage": "Quantum Valley",
+    "start-time": "11:00 PM",
+    "end-time": "12:00 AM"
+  },
+  "Le Youth": {
+    "stage": "Quantum Valley",
+    "start-time": "10:00 PM",
+    "end-time": "11:00 PM"
+  },
+  "Enamour": {
+    "stage": "Quantum Valley",
+    "start-time": "09:00 PM",
+    "end-time": "10:00 PM"
+  },
+  "8Kays": {
+    "stage": "Quantum Valley",
+    "start-time": "08:00 PM",
+    "end-time": "09:00 PM"
+  },
+  "Anden": {
+    "stage": "Quantum Valley",
+    "start-time": "07:00 PM",
+    "end-time": "08:00 PM"
+  },
+  "Abana": {
+    "stage": "Stereo Bloom",
+    "start-time": "04:30 AM",
+    "end-time": "05:30 AM"
+  },
+  "Jaded": {
+    "stage": "Stereo Bloom",
+    "start-time": "03:30 AM",
+    "end-time": "04:30 AM"
+  },
+  "Joshwa": {
+    "stage": "Stereo Bloom",
+    "start-time": "02:30 AM",
+    "end-time": "03:30 AM"
+  },
+  "CID": {
+    "stage": "Stereo Bloom",
+    "start-time": "01:30 AM",
+    "end-time": "02:30 AM"
+  },
+  "James Hype": {
+    "stage": "Stereo Bloom",
+    "start-time": "12:30 AM",
+    "end-time": "01:30 AM"
+  },
+  "ACRAZE B2B Noizu": {
+    "stage": "Stereo Bloom",
+    "start-time": "11:15 PM",
+    "end-time": "12:30 AM"
+  },
+  "Deeper Purpose": {
+    "stage": "Stereo Bloom",
+    "start-time": "10:15 PM",
+    "end-time": "11:15 PM"
+  },
+  "Hannah Wants": {
+    "stage": "Stereo Bloom",
+    "start-time": "09:15 PM",
+    "end-time": "10:15 PM"
+  },
+  "Goodboys": {
+    "stage": "Stereo Bloom",
+    "start-time": "08:15 PM",
+    "end-time": "09:15 PM"
+  },
+  "Kaleena Zanders": {
+    "stage": "Stereo Bloom",
+    "start-time": "07:00 PM",
+    "end-time": "08:15 PM"
+  },
+  "Todd Terry": {
+    "stage": "Bionic Jungle",
+    "start-time": "04:00 AM",
+    "end-time": "05:30 AM"
+  },
+  "DJ Minx": {
+    "stage": "Bionic Jungle",
+    "start-time": "02:00 AM",
+    "end-time": "04:00 AM"
+  },
+  "Dennis Ferrer": {
+    "stage": "Bionic Jungle",
+    "start-time": "12:00 AM",
+    "end-time": "02:00 AM"
+  },
+  "Fred Everything": {
+    "stage": "Bionic Jungle",
+    "start-time": "10:00 PM",
+    "end-time": "12:00 AM"
+  },
+  "Things You Say": {
+    "stage": "Bionic Jungle",
+    "start-time": "08:30 PM",
+    "end-time": "10:00 PM"
+  },
+  "Baggi": {
+    "stage": "Bionic Jungle",
+    "start-time": "07:00 PM",
+    "end-time": "08:30 PM"
+  }
+}
