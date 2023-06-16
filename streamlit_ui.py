@@ -22,7 +22,7 @@ class StreamlitUI:
         self.fest_info.load_concert_details(file_path)
         self.show_festival_information()
 
-        self.spotify_manger = SpotifyManager(st.secrets["spotify_client_id"], st.secrets["spotify_client_key"])
+        self.spotify_manger = SpotifyManager(st.secrets["spotify_client_id"], st.secrets["spotify_client_secret"])
         self.show_spotify_infromation()
 
     def sidebar(self):
@@ -47,7 +47,7 @@ class StreamlitUI:
         with st.expander("Show Schedule"):
             st.pyplot(showtime_chart.fig)
 
-    def show_festival_information(self, file_path):
+    def show_festival_information(self):
         st.image(self.fest_info.concert_data["image_url"], caption=self.fest_info.concert_data["name"],
                  use_column_width=True)
         st.header(self.fest_info.concert_data["name"])
@@ -59,7 +59,7 @@ class StreamlitUI:
                 st.image(self.fest_info.concert_data["map_image_url"], caption=self.fest_info.concert_data["name"],
                          use_column_width=True)
 
-        self.festival_planner_instance = festival_planner.FestivalPlanner(file_path)
+        self.festival_planner_instance = festival_planner.FestivalPlanner()
         self.load_gantt_chart()
 
     def show_spotify_infromation(self):
@@ -72,9 +72,10 @@ class StreamlitUI:
                 'Playlist': []
             }
             for artist in playlist_data:
-                data["Artist"].append(artist)
-                data["# Songs"].append(playlist_data[artist])
-                data["Playlist"].append("")
+                if playlist_data[artist] > 0:
+                    data["Artist"].append(artist)
+                    data["# Songs"].append(playlist_data[artist])
+                    data["Playlist"].append("")
 
             # Create a DataFrame from the data
             df = pd.DataFrame(data)

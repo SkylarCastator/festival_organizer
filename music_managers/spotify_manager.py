@@ -55,14 +55,14 @@ class SpotifyManager:
         Finds a user's account and iterates through the user's playlist to find artist at the festival
         :param artists_to_search: List of artist to search for
         """
-        playlists = self.spotify_instance.find_playlists(spotify_user)
+        playlists = self.find_playlists(spotify_user)
         playlist_count_data = {}
         for artist in artists_to_search:
             playlist_count_data[artist] = 0
 
         print("Please wait while we search your spotify account")
         for playlist in playlists:
-            artist_information = self.spotify_instance.search_playlist_for_artist(playlist, artists_to_search)
+            artist_information = self.search_playlist_for_artist(playlist, artists_to_search)
             for artist_data in artist_information:
                 if len(artist_information[artist_data]) > 0:
                     playlist_count_data[artist_data] += len(artist_information[artist_data])
