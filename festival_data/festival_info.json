@@ -1,0 +1,455 @@
+{
+  "name": "EDC (Electric Daisy Carnival)",
+  "year": "2023",
+  "date": "May 20th",
+  "description": "Electric Daisy Carnival, commonly known as EDC, is an electronic dance music festival organized by promoter and distributor Insomniac. The annual flagship event, EDC Las Vegas, is held in May at the Las Vegas Motor Speedway, and is currently the largest electronic dance music festival in North America.",
+  "image_url": "https://d3vhc53cl8e8km.cloudfront.net/hello-staging/wp-content/uploads/sites/21/2023/05/24095051/edclv_2024_mk_te_fest_site_seo_1200x630_r02.jpg",
+  "map_image_url": "https://www.edmtunes.com/wp-content/uploads/2023/05/image-14.png",
+  "shows": {
+  "Alok": {
+    "stage": "Kinetic Field",
+    "start-time": "04:24 AM",
+    "end-time": "05:28 AM"
+  },
+  "Chris Lake": {
+    "stage": "Kinetic Field",
+    "start-time": "03:06 AM",
+    "end-time": "04:21 AM"
+  },
+  "Zedd": {
+    "stage": "Kinetic Field",
+    "start-time": "01:48 AM",
+    "end-time": "03:03 AM"
+  },
+  "Fireworks": {
+    "stage": "Kinetic Field",
+    "start-time": "01:42 AM",
+    "end-time": "01:48 AM"
+  },
+  "Tiësto": {
+    "stage": "Kinetic Field",
+    "start-time": "12:27 AM",
+    "end-time": "01:42 AM"
+  },
+  "Boris Brejcha": {
+    "stage": "Kinetic Field",
+    "start-time": "11:19 PM",
+    "end-time": "12:24 AM"
+  },
+  "James Hype": {
+    "stage": "Kinetic Field",
+    "start-time": "10:16 PM",
+    "end-time": "11:16 PM"
+  },
+  "Valentino Khan": {
+    "stage": "Kinetic Field",
+    "start-time": "09:05 PM",
+    "end-time": "10:10 PM"
+  },
+  "MORTEN": {
+    "stage": "Kinetic Field",
+    "start-time": "08:00 PM",
+    "end-time": "09:05 PM"
+  },
+  "Korolova": {
+    "stage": "Kinetic Field",
+    "start-time": "07:00 PM",
+    "end-time": "08:00 PM"
+  },
+  "Habstrakt": {
+    "stage": "Cosmic Meadow",
+    "start-time": "04:00 AM",
+    "end-time": "05:30 AM"
+  },
+  "Sullivan King": {
+    "stage": "Cosmic Meadow",
+    "start-time": "03:00 AM",
+    "end-time": "04:00 AM"
+  },
+  "JSTJR": {
+    "stage": "Cosmic Meadow",
+    "start-time": "01:40 AM",
+    "end-time": "03:00 AM"
+  },
+  "Zeds Dead": {
+    "stage": "Cosmic Meadow",
+    "start-time": "12:10 AM",
+    "end-time": "01:40 AM"
+  },
+  "Chase & Status": {
+    "stage": "Cosmic Meadow",
+    "start-time": "12:10 AM",
+    "end-time": "01:40 AM"
+  },
+  "Kaytranada": {
+    "stage": "Cosmic Meadow",
+    "start-time": "11:05 PM",
+    "end-time": "12:05 AM"
+  },
+  "Noizu": {
+    "stage": "Cosmic Meadow",
+    "start-time": "09:45 PM",
+    "end-time": "11:00 PM"
+  },
+  "CID": {
+    "stage": "Cosmic Meadow",
+    "start-time": "08:30 PM",
+    "end-time": "09:45 PM"
+  },
+  "Sage Armstrong": {
+    "stage": "Cosmic Meadow",
+    "start-time": "08:30 PM",
+    "end-time": "09:45 PM"
+  },
+  "Nala": {
+    "stage": "Cosmic Meadow",
+    "start-time": "07:00 PM",
+    "end-time": "08:30 PM"
+  },
+    "Afrojack (Sunrise Set)": {
+    "stage": "Circuit Grounds",
+    "start-time": "04:15 AM",
+    "end-time": "05:30 AM"
+  },
+  "Special Guest": {
+    "stage": "Circuit Grounds",
+    "start-time": "03:00 AM",
+    "end-time": "04:15 AM"
+  },
+  "Subtronics": {
+    "stage": "Circuit Grounds",
+    "start-time": "02:00 AM",
+    "end-time": "03:00 AM"
+  },
+  "Kaskade": {
+    "stage": "Circuit Grounds",
+    "start-time": "12:30 AM",
+    "end-time": "02:00 AM"
+  },
+  "Dom Dolla": {
+    "stage": "Circuit Grounds",
+    "start-time": "11:00 PM",
+    "end-time": "12:30 AM"
+  },
+  "ACRAZE": {
+    "stage": "Circuit Grounds",
+    "start-time": "09:45 PM",
+    "end-time": "11:00 PM"
+  },
+  "Spencer Brown": {
+    "stage": "Circuit Grounds",
+    "start-time": "08:30 PM",
+    "end-time": "09:45 PM"
+  },
+  "Modapit": {
+    "stage": "Circuit Grounds",
+    "start-time": "07:00 PM",
+    "end-time": "08:30 PM"
+  },
+"Hot Since 82": {
+    "stage": "Neon Garden",
+    "start-time": "04:00 AM",
+    "end-time": "05:30 AM"
+  },
+  "Mochakk": {
+    "stage": "Neon Garden",
+    "start-time": "02:30 AM",
+    "end-time": "04:00 AM"
+  },
+  "The Martinez Brothers": {
+    "stage": "Neon Garden",
+    "start-time": "01:00 AM",
+    "end-time": "02:30 AM"
+  },
+  "PAWSA": {
+    "stage": "Neon Garden",
+    "start-time": "11:30 PM",
+    "end-time": "01:00 AM"
+  },
+  "Paco Osuna": {
+    "stage": "Neon Garden",
+    "start-time": "10:00 PM",
+    "end-time": "11:30 PM"
+  },
+  "Layla Benitez": {
+    "stage": "Neon Garden",
+    "start-time": "08:30 PM",
+    "end-time": "10:00 PM"
+  },
+  "Ms. Mada": {
+    "stage": "Neon Garden",
+    "start-time": "07:00 PM",
+    "end-time": "08:30 PM"
+  },
+  "Bakke": {
+    "stage": "Neon Garden",
+    "start-time": "07:00 PM",
+    "end-time": "08:30 PM"
+  },
+  "12th Planet": {
+    "stage": "Basspod",
+    "start-time": "04:30 AM",
+    "end-time": "05:30 AM"
+  },
+  "Moody Good (Throwback Set)": {
+    "stage": "Basspod",
+    "start-time": "03:30 AM",
+    "end-time": "04:30 AM"
+  },
+  "Wooli": {
+    "stage": "Basspod",
+    "start-time": "02:30 AM",
+    "end-time": "03:30 AM"
+  },
+  "Svdden Death: Into The Inferno": {
+    "stage": "Basspod",
+    "start-time": "01:30 AM",
+    "end-time": "02:30 AM"
+  },
+  "Excision": {
+    "stage": "Basspod",
+    "start-time": "12:30 AM",
+    "end-time": "01:30 AM"
+  },
+  "Dion Timmer": {
+    "stage": "Basspod",
+    "start-time": "12:30 AM",
+    "end-time": "01:30 AM"
+  },
+  "Netsky": {
+    "stage": "Basspod",
+    "start-time": "11:30 PM",
+    "end-time": "12:30 AM"
+  },
+  "Space Laces": {
+    "stage": "Basspod",
+    "start-time": "10:30 PM",
+    "end-time": "11:30 PM"
+  },
+  "Metrik": {
+    "stage": "Basspod",
+    "start-time": "09:30 PM",
+    "end-time": "10:30 PM"
+  },
+  "Grafix": {
+    "stage": "Basspod",
+    "start-time": "09:30 PM",
+    "end-time": "10:30 PM"
+  },
+  "Ray Volpe": {
+    "stage": "Basspod",
+    "start-time": "08:40 PM",
+    "end-time": "09:30 PM"
+  },
+  "HVDES": {
+    "stage": "Basspod",
+    "start-time": "07:50 PM",
+    "end-time": "08:40 PM"
+  },
+  "Fury": {
+    "stage": "Basspod",
+    "start-time": "07:00 PM",
+    "end-time": "07:50 PM"
+  },
+  "Nightstalker": {
+    "stage": "Basspod",
+    "start-time": "07:00 PM",
+    "end-time": "07:50 PM"
+  },
+  "Softest Hard": {
+    "stage": "Wasteland",
+    "start-time": "04:30 AM",
+    "end-time": "05:30 AM"
+  },
+  "Warface": {
+    "stage": "Wasteland",
+    "start-time": "03:30 AM",
+    "end-time": "04:30 AM"
+  },
+  "D-Sturb": {
+    "stage": "Wasteland",
+    "start-time": "03:30 AM",
+    "end-time": "04:30 AM"
+  },
+  "Sub Zero Project": {
+    "stage": "Wasteland",
+    "start-time": "02:30 AM",
+    "end-time": "03:30 AM"
+  },
+  "Darren Styles": {
+    "stage": "Wasteland",
+    "start-time": "01:30 AM",
+    "end-time": "02:30 AM"
+  },
+  "Coone": {
+    "stage": "Wasteland",
+    "start-time": "12:30 AM",
+    "end-time": "01:30 AM"
+  },
+  "Lady Faith": {
+    "stage": "Wasteland",
+    "start-time": "11:30 PM",
+    "end-time": "12:30 AM"
+  },
+  "Audiofreq": {
+    "stage": "Wasteland",
+    "start-time": "10:30 PM",
+    "end-time": "11:30 PM"
+  },
+  "Rebelion": {
+    "stage": "Wasteland",
+    "start-time": "09:30 PM",
+    "end-time": "10:30 PM"
+  },
+  "Dionysus & Yosuf present: Bigger, Stronger, Faster": {
+    "stage": "Wasteland",
+    "start-time": "08:30 PM",
+    "end-time": "09:30 PM"
+  },
+  "Suae": {
+    "stage": "Wasteland",
+    "start-time": "07:00 PM",
+    "end-time": "08:30 PM"
+  },
+"Triode": {
+    "stage": "Quantum Valley",
+    "start-time": "04:30 AM",
+    "end-time": "05:30 AM"
+  },
+  "Billy Gillies": {
+    "stage": "Quantum Valley",
+    "start-time": "03:30 AM",
+    "end-time": "04:30 AM"
+  },
+  "Will Atkinson": {
+    "stage": "Quantum Valley",
+    "start-time": "02:30 AM",
+    "end-time": "03:30 AM"
+  },
+  "Vini Vici": {
+    "stage": "Quantum Valley",
+    "start-time": "01:30 AM",
+    "end-time": "02:30 AM"
+  },
+  "Gareth Emery presents Decades": {
+    "stage": "Quantum Valley",
+    "start-time": "12:30 AM",
+    "end-time": "01:30 AM"
+  },
+  "Ben Nicky presents Emotional Havoc": {
+    "stage": "Quantum Valley",
+    "start-time": "11:30 PM",
+    "end-time": "12:30 AM"
+  },
+  "Giuseppe Ottaviani": {
+    "stage": "Quantum Valley",
+    "start-time": "10:30 PM",
+    "end-time": "11:30 PM"
+  },
+  "Jorza": {
+    "stage": "Quantum Valley",
+    "start-time": "09:30 PM",
+    "end-time": "10:30 PM"
+  },
+  "atDusk": {
+    "stage": "Quantum Valley",
+    "start-time": "08:30 PM",
+    "end-time": "09:30 PM"
+  },
+  "Yoshi & Razner": {
+    "stage": "Quantum Valley",
+    "start-time": "07:00 PM",
+    "end-time": "08:30 PM"
+  },
+  "Bexxie": {
+    "stage": "Stereo Bloom",
+    "start-time": "04:15 AM",
+    "end-time": "05:30 AM"
+  },
+  "Tom & Collins": {
+    "stage": "Stereo Bloom",
+    "start-time": "03:00 AM",
+    "end-time": "04:15 AM"
+  },
+  "Mau P": {
+    "stage": "Stereo Bloom",
+    "start-time": "02:00 AM",
+    "end-time": "03:00 AM"
+  },
+  "Sonny Fodera": {
+    "stage": "Stereo Bloom",
+    "start-time": "01:00 AM",
+    "end-time": "02:00 AM"
+  },
+  "Dombresky": {
+    "stage": "Stereo Bloom",
+    "start-time": "12:00 AM",
+    "end-time": "01:00 AM"
+  },
+  "Westend": {
+    "stage": "Stereo Bloom",
+    "start-time": "11:00 PM",
+    "end-time": "12:00 AM"
+  },
+  "Miane": {
+    "stage": "Stereo Bloom",
+    "start-time": "10:00 PM",
+    "end-time": "11:00 PM"
+  },
+  "Ferreck Dawn": {
+    "stage": "Stereo Bloom",
+    "start-time": "09:00 PM",
+    "end-time": "10:00 PM"
+  },
+  "Chaney": {
+    "stage": "Stereo Bloom",
+    "start-time": "08:00 PM",
+    "end-time": "09:00 PM"
+  },
+  "Camden Cox": {
+    "stage": "Stereo Bloom",
+    "start-time": "07:00 PM",
+    "end-time": "08:00 PM"
+  },
+  "KETTAMA": {
+    "stage": "Bionic Jungle",
+    "start-time": "04:30 AM",
+    "end-time": "05:30 AM"
+  },
+  "SHERELLE": {
+    "stage": "Bionic Jungle",
+    "start-time": "03:00 AM",
+    "end-time": "04:30 AM"
+  },
+  "Danny Daze": {
+    "stage": "Bionic Jungle",
+    "start-time": "01:30 AM",
+    "end-time": "03:00 AM"
+  },
+  "Ben UFO": {
+    "stage": "Bionic Jungle",
+    "start-time": "12:00 AM",
+    "end-time": "01:30 AM"
+  },
+  "jamesjamesjames": {
+    "stage": "Bionic Jungle",
+    "start-time": "10:30 PM",
+    "end-time": "12:00 AM"
+  },
+  "salute": {
+    "stage": "Bionic Jungle",
+    "start-time": "09:30 PM",
+    "end-time": "10:30 PM"
+  },
+  "AK Sports": {
+    "stage": "Bionic Jungle",
+    "start-time": "08:30 PM",
+    "end-time": "09:30 PM"
+  },
+  "John Bryars": {
+    "stage": "Bionic Jungle",
+    "start-time": "07:00 PM",
+    "end-time": "08:30 PM"
+  }
+}
+}

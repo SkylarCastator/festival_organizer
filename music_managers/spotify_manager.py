@@ -2,12 +2,12 @@ import requests
 
 
 class SpotifyManager:
-    def __init__(self, CLIENT_ID, CLIENT_SECRET):
+    def __init__(self, client_id, client_secret):
         auth_url = 'https://accounts.spotify.com/api/token'
         auth_response = requests.post(auth_url, {
             'grant_type': 'client_credentials',
-            'client_id': CLIENT_ID,
-            'client_secret': CLIENT_SECRET
+            'client_id': client_id,
+            'client_secret': client_secret
         })
 
         auth_data = auth_response.json()
@@ -18,13 +18,22 @@ class SpotifyManager:
         }
         print ("Connected")
 
-    def find_playlists(self, USERNAME):
-        playlist_url = f'https://api.spotify.com/v1/users/{USERNAME}/playlists'
+    def find_playlists(self, username):
+        """
+        Returns a list of playlist from a user
+        :param USERNAME: Name of user searched
+        """
+        playlist_url = f'https://api.spotify.com/v1/users/{username}/playlists'
         playlist_response = requests.get(playlist_url, headers=self.headers)
         playlist_data = playlist_response.json()
         return playlist_data['items']
 
     def search_playlist_for_artist(self, playlist, artists_to_search):
+        """
+        Creates a dictionary with keys being the artist and the value being all the music of the artist
+        :param playlist: List of playlists to search
+        :param artists_to_search: List of artist to search for
+        """
         artist_data = {}
         for artist in artists_to_search:
             artist_data[artist] = []
@@ -40,3 +49,22 @@ class SpotifyManager:
                     artist_data[artist].append(track['track']['name'])
 
         return artist_data
+
+    def search_spotify_playlists(self, artists_to_search):
+        """
+        Finds a user's account and iterates through the user's playlist to find artist at the festival
+        :param artists_to_search: List of artist to search for
+        """
+        playlists = self.spotify_instance.find_playlists(self.spotify_user)
+        playlist_count_data = {}
+        for artist in artists_to_search:
+            playlist_count_data[artist] = 0
+
+        print("Please wait while we search your spotify account")
+        for playlist in playlists:
+            artist_information = self.spotify_instance.search_playlist_for_artist(playlist, artists_to_search)
+            for artist_data in artist_information:
+                if len(artist_information[artist_data]) > 0:
+                    playlist_count_data[artist_data] += len(artist_information[artist_data])
+
+        return playlist_count_data
