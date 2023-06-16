@@ -9,17 +9,17 @@ from music_managers.spotify_manager import SpotifyManager
 class StreamlitUI:
     def __init__(self):
         self.festival_planner_instance = None
-        file_path = f"festival_data/festival_info.json"
+        self.file_path = f"festival_data/festival_info.json"
         self.spotify_user = "aerialchemist"
 
-        st.title("Concert Planner")
+        st.title("Festival Planner")
         st.write("""This tool helps users search through their Spotify 
                     to find artist for festivals and help plan the shows
                      based on their preferences""")
         self.sidebar()
 
         self.fest_info = festival_infromation.FestivalInfromation()
-        self.fest_info.load_concert_details(file_path)
+        self.fest_info.load_concert_details(self.file_path)
         self.show_festival_information()
 
         self.spotify_manger = SpotifyManager(st.secrets["spotify_client_id"], st.secrets["spotify_client_secret"])
@@ -28,9 +28,10 @@ class StreamlitUI:
     def sidebar(self):
         st.sidebar.title("Planner Settings")
 
-        input_text = st.sidebar.text_input("Spotify Account")
+        input_text = st.sidebar.text_input("Spotify Account", placeholder=self.spotify_user)
         if st.sidebar.button("Search"):
-            st.write("You entered:", input_text)
+            self.spotify_manger.check_username_exists(input_text)
+            self.spotify_user = input_text
 
         uploaded_file = st.sidebar.file_uploader("Choose a JSON file", type="json")
 
@@ -61,6 +62,18 @@ class StreamlitUI:
 
         self.festival_planner_instance = festival_planner.FestivalPlanner()
         self.load_gantt_chart()
+
+        with st.expander("Festival Data"):
+            st.write("Download the festival json file below to be able to make your own example")
+            with open(self.file_path, 'r') as file:
+                file_content = file.read()
+
+            # Specify the file name
+            file_name = f'{self.fest_info.concert_data["name"]}_{self.fest_info.concert_data["year"]}.json'
+
+            # Download the JSON file
+            st.download_button('Click to Download', data=file_content, file_name=file_name)
+
 
     def show_spotify_infromation(self):
         st.header("Spotify Search")
