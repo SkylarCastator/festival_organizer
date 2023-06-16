@@ -1,8 +1,7 @@
 import streamlit as st
-import festival_planner
-import festival_infromation
+from festival_data import festival_planner, festival_infromation
 import pandas as pd
-from charts.festival_show_time_chart import FestivalShowTimeChart
+from charts.festival_showtime_chart import FestivalShowTimeChart
 from music_managers.spotify_manager import SpotifyManager
 
 
@@ -74,7 +73,6 @@ class StreamlitUI:
             # Download the JSON file
             st.download_button('Click to Download', data=file_content, file_name=file_name)
 
-
     def show_spotify_infromation(self):
         st.header("Spotify Search")
         playlist_data = self.spotify_manger.search_spotify_playlists(self.spotify_user, self.fest_info.get_all_artist())
@@ -132,8 +130,6 @@ class StreamlitUI:
 
             conflict_df = pd.DataFrame(conflict_data)
             st.table(conflict_df)
-
-
 
 
 if __name__ == "__main__":

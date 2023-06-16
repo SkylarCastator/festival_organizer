@@ -1,9 +1,8 @@
-# festival_organizer
-This is a useful python script that looks into your music preferences and helps to create an agenda based on your music preferences.
+# Festival Planner
 
-To run the application currently you need to go get a key from spotify's website for their api.
-Once you have the key linked, you can then enter in the account of the spotify user you want to scrape the playlist from.
+![Festival Planner](./resources/festival_header.jpg)
 
-Run the requirements.txt file to download the correct packages for python.
+Run the application using the link below:
 
-pip install -r requirements.txt
+[Festival Planner](https://skylarcastator-festival-organizer-streamlit-ui-s4xpql.streamlit.app/)
+
