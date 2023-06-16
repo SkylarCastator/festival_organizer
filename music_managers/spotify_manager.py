@@ -16,12 +16,12 @@ class SpotifyManager:
             'Authorization': f'Bearer {self.access_token}',
             'Content-Type': 'application/json'
         }
-        print ("Connected")
+        print ("Connected to spotify")
 
     def find_playlists(self, username):
         """
         Returns a list of playlist from a user
-        :param USERNAME: Name of user searched
+        :param username: Name of user searched
         """
         playlist_url = f'https://api.spotify.com/v1/users/{username}/playlists'
         playlist_response = requests.get(playlist_url, headers=self.headers)
@@ -50,12 +50,12 @@ class SpotifyManager:
 
         return artist_data
 
-    def search_spotify_playlists(self, artists_to_search):
+    def search_spotify_playlists(self, spotify_user, artists_to_search):
         """
         Finds a user's account and iterates through the user's playlist to find artist at the festival
         :param artists_to_search: List of artist to search for
         """
-        playlists = self.spotify_instance.find_playlists(self.spotify_user)
+        playlists = self.spotify_instance.find_playlists(spotify_user)
         playlist_count_data = {}
         for artist in artists_to_search:
             playlist_count_data[artist] = 0
