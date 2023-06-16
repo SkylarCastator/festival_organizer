@@ -6,16 +6,14 @@ class FestivalPlanner:
     def __init__(self):
         pass
 
-    def search_user_account(self, festival_information, spotify_instance):
-        playlist_count_data = spotify_instance.search_spotify_playlists(festival_information.get_all_artist())
-
+    def search_user_account(self, festival_information, playlist_count_data):
         liked_artist_dictionary = {}
         for artist_data in playlist_count_data:
             if playlist_count_data[artist_data] > 0:
                 liked_artist_dictionary[artist_data] = festival_information.concert_data["shows"][artist_data]
 
-        recommended, conflicts = self.sort_artists(liked_artist_dictionary)
-        self.show_suggestion_results(recommended, conflicts)
+        return self.sort_artists(liked_artist_dictionary)
+        #self.show_suggestion_results(recommended, conflicts)
 
     def sort_artists(self, artists_dict):
         """

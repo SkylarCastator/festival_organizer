@@ -99,6 +99,41 @@ class StreamlitUI:
         with st.expander("Suggested Planner"):
             st.write(
                 "These are the suggest shows to go see and the information for the shows based on your preferences")
+            recommended, conflicts = self.festival_planner_instance.search_user_account(self.fest_info, playlist_data)
+
+            recommended_data = {
+                'Artist': [],
+                'Start Time': [],
+                'End Time': [],
+                'Stage': []
+            }
+            for artist_recommended in recommended:
+                artist, start_time, end_time, stage = artist_recommended
+                recommended_data["Artist"].append(artist)
+                recommended_data["Start Time"].append(start_time)
+                recommended_data["End Time"].append(end_time)
+                recommended_data["Stage"].append(stage)
+
+            recommended_df = pd.DataFrame(recommended_data)
+            st.table(recommended_df)
+
+            conflict_data = {
+                'Artist': [],
+                'Start Time': [],
+                'End Time': [],
+                'Stage': []
+            }
+            for conflict in conflicts:
+                artist, start_time, end_time, stage = conflict
+                conflict_data["Artist"].append(artist)
+                conflict_data["Start Time"].append(start_time)
+                conflict_data["End Time"].append(end_time)
+                conflict_data["Stage"].append(stage)
+
+            conflict_df = pd.DataFrame(conflict_data)
+            st.table(conflict_df)
+
+
 
 
 if __name__ == "__main__":
