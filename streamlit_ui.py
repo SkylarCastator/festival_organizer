@@ -4,6 +4,11 @@ import pandas as pd
 from charts.festival_showtime_chart import FestivalShowTimeChart
 from music_managers.spotify_manager import SpotifyManager
 
+import pandas as pd
+from datetime import datetime, timedelta
+import matplotlib.pyplot as plt
+import numpy as np
+
 
 class StreamlitUI:
     def __init__(self):
@@ -44,8 +49,15 @@ class StreamlitUI:
                           self.fest_info.concert_data["shows"][artist]['stage']])
 
         showtime_chart = FestivalShowTimeChart(shows)
-        with st.expander("Show Schedule"):
-            st.pyplot(showtime_chart.fig)
+
+        expander = st.expander("Show Schedule")
+        graphs = {}
+        show_dates = ["May 19, 2023", "May 20, 2023", "May 21, 2023"]
+        for date in show_dates:
+            graphs[date] = showtime_chart.fig
+
+        selected_graph = expander.selectbox("Select Date", list(graphs.keys()))
+        expander.pyplot(graphs[selected_graph])
 
     def show_festival_information(self):
         st.image(self.fest_info.concert_data["image_url"], caption=self.fest_info.concert_data["name"],

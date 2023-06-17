@@ -34,7 +34,6 @@ class FestivalShowTimeChart:
                 else:
                     end = datetime.combine(dummy_date, end_time)
 
-                #midpoint = start + (end - start) / 2
                 midpoint = start + (end - start) / 2
                 bar_width = (end - start).total_seconds() / 60  # Width in minutes
 
@@ -69,7 +68,6 @@ class FestivalShowTimeChart:
         ax.set_xticks(time_intervals)
         ax.set_xticklabels(time_labels, rotation=45, ha='right')
         ax.margins(x=0.2)
-        #ax.set_xticklabels(time_labels)
 
         # Remove spines and ticks
         ax.spines['left'].set_visible(False)
