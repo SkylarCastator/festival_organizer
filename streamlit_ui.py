@@ -13,7 +13,7 @@ import numpy as np
 class StreamlitUI:
     def __init__(self):
         self.festival_planner_instance = None
-        self.file_path = f"festival_data/festival_info.json"
+        self.file_path = f"festival_data/edc_2023.json"
         self.spotify_user = "aerialchemist"
 
         st.title("Festival Planner")
@@ -22,7 +22,7 @@ class StreamlitUI:
                      based on their preferences""")
         self.sidebar()
 
-        self.fest_info = festival_infromation.FestivalInfromation()
+        self.fest_info = festival_infromation.FestivalInformation()
         self.fest_info.load_concert_details(self.file_path)
         self.show_festival_information()
 
@@ -40,20 +40,20 @@ class StreamlitUI:
         uploaded_file = st.sidebar.file_uploader("Choose a JSON file", type="json")
 
     def load_gantt_chart(self):
-        all_artist = self.fest_info.get_all_artist()
-        shows = []
-        for artist in all_artist:
-            shows.append([artist,
-                          self.fest_info.concert_data["shows"][artist]["start-time"],
-                          self.fest_info.concert_data["shows"][artist]["end-time"],
-                          self.fest_info.concert_data["shows"][artist]['stage']])
-
-        showtime_chart = FestivalShowTimeChart(shows)
-
         expander = st.expander("Show Schedule")
         graphs = {}
-        show_dates = ["May 19, 2023", "May 20, 2023", "May 21, 2023"]
+        show_dates = self.fest_info.get_all_festival_dates()
         for date in show_dates:
+            all_artist = self.fest_info.get_all_artist_for_date(date)
+            self.fest_info
+            shows = []
+            for artist in all_artist:
+                show_data = self.fest_info.get_show_data(date, artist)
+                shows.append([artist,
+                              show_data["start-time"],
+                              show_data["end-time"],
+                              show_data['stage']])
+            showtime_chart = FestivalShowTimeChart(shows)
             graphs[date] = showtime_chart.fig
 
         selected_graph = expander.selectbox("Select Date", list(graphs.keys()))
@@ -106,11 +106,17 @@ class StreamlitUI:
             # Display the table
             st.table(df)
 
-        with st.expander("Suggested Planner"):
-            st.write(
-                "These are the suggest shows to go see and the information for the shows based on your preferences")
-            recommended, conflicts = self.festival_planner_instance.search_user_account(self.fest_info, playlist_data)
+        expander = st.expander("Suggested Planner")
 
+        expander.write("These are the suggest shows to go see and the information for the shows based on your preferences")
+        recommended_tables = {}
+        conflict_tables = {}
+        show_dates = self.fest_info.get_all_festival_dates()
+        for date in show_dates:
+            shows = self.fest_info.get_shows_for_date(date)
+            playlist_day_data = self.spotify_manger.search_spotify_playlists(self.spotify_user,
+                                                                         self.fest_info.get_all_artist_for_date(date))
+            recommended, conflicts = self.festival_planner_instance.search_user_account(shows, playlist_day_data)
             recommended_data = {
                 'Artist': [],
                 'Start Time': [],
@@ -125,7 +131,7 @@ class StreamlitUI:
                 recommended_data["Stage"].append(stage)
 
             recommended_df = pd.DataFrame(recommended_data)
-            st.table(recommended_df)
+            recommended_tables[date] = recommended_df
 
             conflict_data = {
                 'Artist': [],
@@ -141,7 +147,12 @@ class StreamlitUI:
                 conflict_data["Stage"].append(stage)
 
             conflict_df = pd.DataFrame(conflict_data)
-            st.table(conflict_df)
+            conflict_tables[date] = conflict_df
+
+
+        selected_graph = expander.selectbox("Planner Date", list(show_dates))
+        expander.table(recommended_tables[selected_graph])
+        expander.table(conflict_tables[selected_graph])
 
 
 if __name__ == "__main__":

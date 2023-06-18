@@ -1,7 +1,7 @@
 import json
 
 
-class FestivalInfromation:
+class FestivalInformation:
     def __init__(self):
         self.concert_data = {}
         pass
@@ -17,9 +17,35 @@ class FestivalInfromation:
 
     def get_all_artist(self):
         artists_to_search = []
-        for artist in self.concert_data["shows"]:
-            artists_to_search.append(artist)
+        for lineup in self.concert_data["line_ups"]:
+            for artist in lineup["shows"]:
+                artists_to_search.append(artist)
         return artists_to_search
+
+    def get_all_artist_for_date(self, date):
+        artists_to_search = []
+        for lineup in self.concert_data["line_ups"]:
+            if lineup["date"] == date:
+                for artist in lineup["shows"]:
+                    artists_to_search.append(artist)
+                return artists_to_search
+        return artists_to_search
+
+    def get_show_data(self, date, artist):
+        data = {}
+        for lineup in self.concert_data["line_ups"]:
+            if lineup["date"] == date:
+                data = lineup["shows"][artist]
+                return data
+        return data
+
+    def get_shows_for_date(self, date):
+        data = {}
+        for lineup in self.concert_data["line_ups"]:
+            if lineup["date"] == date:
+                data = lineup["shows"]
+                return data
+        return data
 
     def get_all_stages(self):
         stages = []
@@ -28,5 +54,9 @@ class FestivalInfromation:
                 stages.append(self.concert_data["shows"][artist]['stage'])
         return stages
 
-    def get_all_show_times(self):
-        pass
+    def get_all_festival_dates(self):
+        dates = []
+        for lineup in self.concert_data["line_ups"]:
+            dates.append(lineup["date"])
+        return dates
+
