@@ -1,6 +1,6 @@
 import streamlit as st
 from festival_data import festival_planner, festival_infromation
-import pandas as pd
+import streamlit_cached_functions
 from charts.festival_showtime_chart import FestivalShowTimeChart
 from music_managers.spotify_manager import SpotifyManager
 
@@ -79,69 +79,24 @@ class StreamlitUI:
 
     def show_spotify_infromation(self):
         st.header("Spotify Search")
-        playlist_data = self.spotify_manger.search_spotify_playlists(self.spotify_user, self.fest_info.get_all_artist())
+
         with st.expander("Artist found in User's Playlists"):
-            data = {
-                'Artist': [],
-                '# Songs': [],
-                'Playlist': []
-            }
-            for artist in playlist_data:
-                if playlist_data[artist] > 0:
-                    data["Artist"].append(artist)
-                    data["# Songs"].append(playlist_data[artist])
-                    data["Playlist"].append("")
-
-            # Create a DataFrame from the data
-            df = pd.DataFrame(data)
-
-            # Display the table
+            df = streamlit_cached_functions.show_spotify_playlist_data(self.spotify_manger,
+                                                                       self.spotify_user,
+                                                                       self.fest_info)
             st.table(df)
 
         expander = st.expander("Suggested Planner")
 
-        expander.write("These are the suggest shows to go see and the information for the shows based on your preferences")
-        recommended_tables = {}
-        conflict_tables = {}
+        expander.write(
+            "These are the suggest shows to go see and the information for the shows based on your preferences")
+
         show_dates = self.fest_info.get_all_festival_dates()
-        for date in show_dates:
-            shows = self.fest_info.get_shows_for_date(date)
-            playlist_day_data = self.spotify_manger.search_spotify_playlists(self.spotify_user,
-                                                                         self.fest_info.get_all_artist_for_date(date))
-            recommended, conflicts = self.festival_planner_instance.search_user_account(shows, playlist_day_data)
-            recommended_data = {
-                'Artist': [],
-                'Start Time': [],
-                'End Time': [],
-                'Stage': []
-            }
-            for artist_recommended in recommended:
-                artist, start_time, end_time, stage = artist_recommended
-                recommended_data["Artist"].append(artist)
-                recommended_data["Start Time"].append(start_time)
-                recommended_data["End Time"].append(end_time)
-                recommended_data["Stage"].append(stage)
-
-            recommended_df = pd.DataFrame(recommended_data)
-            recommended_tables[date] = recommended_df
-
-            conflict_data = {
-                'Artist': [],
-                'Start Time': [],
-                'End Time': [],
-                'Stage': []
-            }
-            for conflict in conflicts:
-                artist, start_time, end_time, stage = conflict
-                conflict_data["Artist"].append(artist)
-                conflict_data["Start Time"].append(start_time)
-                conflict_data["End Time"].append(end_time)
-                conflict_data["Stage"].append(stage)
-
-            conflict_df = pd.DataFrame(conflict_data)
-            conflict_tables[date] = conflict_df
-
-
+        recommended_tables, conflict_tables = streamlit_cached_functions.generate_festival_solver_tables(self.spotify_manger,
+                                                                               self.spotify_user,
+                                                                               self.fest_info,
+                                                                               show_dates,
+                                                                               self.festival_planner_instance)
         selected_graph = expander.selectbox("Planner Date", list(show_dates))
         expander.table(recommended_tables[selected_graph])
         expander.table(conflict_tables[selected_graph])

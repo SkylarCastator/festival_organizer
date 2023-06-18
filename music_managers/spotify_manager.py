@@ -20,18 +20,12 @@ class SpotifyManager:
 
     def check_username_exists(self, username):
         url = f'https://api.spotify.com/v1/users/{username}'
-        headers = {
-            'Authorization': 'Bearer YOUR_ACCESS_TOKEN',
-            'Content-Type': 'application/json'
-        }
-
-        response = requests.get(url, headers=headers)
+        response = requests.get(url, headers=self.headers)
         if response.status_code == 200:
             return True
         elif response.status_code == 404:
             return False
         else:
-            # Handle other status codes as needed
             response.raise_for_status()
 
     def find_playlists(self, username):
