@@ -1,11 +1,4 @@
-import json
-from music_managers.spotify_manager import SpotifyManager
-
-
 class FestivalPlanner:
-    def __init__(self):
-        pass
-
     def search_user_account(self, festival_information, playlist_count_data):
         liked_artist_dictionary = {}
         for artist_data in playlist_count_data:

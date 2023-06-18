@@ -4,11 +4,6 @@ import pandas as pd
 from charts.festival_showtime_chart import FestivalShowTimeChart
 from music_managers.spotify_manager import SpotifyManager
 
-import pandas as pd
-from datetime import datetime, timedelta
-import matplotlib.pyplot as plt
-import numpy as np
-
 
 class StreamlitUI:
     def __init__(self):
@@ -20,6 +15,7 @@ class StreamlitUI:
         st.write("""This tool helps users search through their Spotify 
                     to find artist for festivals and help plan the shows
                      based on their preferences""")
+
         self.sidebar()
 
         self.fest_info = festival_infromation.FestivalInformation()
@@ -65,24 +61,20 @@ class StreamlitUI:
         st.header(self.fest_info.concert_data["name"])
         st.write(self.fest_info.concert_data["year"])
         st.write(self.fest_info.concert_data["description"])
-
         with st.expander("Festival Map"):
             if self.fest_info.concert_data["map_image_url"] != "":
                 st.image(self.fest_info.concert_data["map_image_url"], caption=self.fest_info.concert_data["name"],
                          use_column_width=True)
-
         self.festival_planner_instance = festival_planner.FestivalPlanner()
         self.load_gantt_chart()
+        self.show_expander_to_download_festival_data()
 
+    def show_expander_to_download_festival_data(self):
         with st.expander("Festival Data"):
             st.write("Download the festival json file below to be able to make your own example")
             with open(self.file_path, 'r') as file:
                 file_content = file.read()
-
-            # Specify the file name
             file_name = f'{self.fest_info.concert_data["name"]}_{self.fest_info.concert_data["year"]}.json'
-
-            # Download the JSON file
             st.download_button('Click to Download', data=file_content, file_name=file_name)
 
     def show_spotify_infromation(self):
