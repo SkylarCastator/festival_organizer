@@ -1,4 +1,5 @@
 import streamlit as st
+import pandas as pd
 from festival_data import festival_planner, festival_infromation
 import streamlit_cached_functions
 from charts.festival_showtime_chart import FestivalShowTimeChart
@@ -26,12 +27,10 @@ class StreamlitUI:
 
     def sidebar(self):
         st.sidebar.title("Planner Settings")
-
         input_text = st.sidebar.text_input("Spotify Account", placeholder=self.spotify_user)
         if st.sidebar.button("Search"):
             self.spotify_manger.check_username_exists(input_text)
             self.spotify_user = input_text
-
         uploaded_file = st.sidebar.file_uploader("Choose a JSON file", type="json")
 
     def load_gantt_chart(self):
@@ -78,32 +77,43 @@ class StreamlitUI:
 
     def show_spotify_infromation(self):
         st.header("Spotify Search")
-
         with st.expander("Artist found in User's Playlists"):
-            df = streamlit_cached_functions.show_spotify_playlist_data(self.spotify_manger,
+            playlist_data = streamlit_cached_functions.get_playlist_data(self.spotify_manger,
                                                                        self.spotify_user,
                                                                        self.fest_info)
+            df = self.show_spotify_playlist_data(playlist_data)
             st.table(df)
-
         expander = st.expander("Suggested Planner")
-
         expander.write(
             "These are the suggest shows to go see and the information for the shows based on your preferences")
-
         show_dates = self.fest_info.get_all_festival_dates()
-        recommended_tables, conflict_tables = streamlit_cached_functions.generate_festival_solver_tables(self.spotify_manger,
-                                                                               self.spotify_user,
-                                                                               self.fest_info,
-                                                                               show_dates,
-                                                                               self.festival_planner_instance)
+        recommended_tables, conflict_tables = streamlit_cached_functions.generate_festival_solver_tables(
+            playlist_data,
+            self.fest_info,
+            show_dates,
+            self.festival_planner_instance)
         selected_graph = expander.selectbox("Planner Date", list(show_dates))
-
         expander.write(
             "Shows with no conflicts")
         expander.table(recommended_tables[selected_graph])
         expander.write(
             "Shows with conflicts")
         expander.table(conflict_tables[selected_graph])
+
+    def show_spotify_playlist_data(self, playlist_data):
+        data = {
+            'Artist': [],
+            '# Songs': [],
+            'Playlist': []
+        }
+        for artist in playlist_data:
+            if playlist_data[artist] > 0:
+                data["Artist"].append(artist)
+                data["# Songs"].append(playlist_data[artist])
+                data["Playlist"].append("")
+
+        df = pd.DataFrame(data)
+        return df
 
 
 if __name__ == "__main__":

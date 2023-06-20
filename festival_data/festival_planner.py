@@ -6,7 +6,8 @@ class FestivalPlanner:
         liked_artist_dictionary = {}
         for artist_data in playlist_count_data:
             if playlist_count_data[artist_data] > 0:
-                liked_artist_dictionary[artist_data] = festival_information[artist_data]
+                if artist_data in festival_information:
+                    liked_artist_dictionary[artist_data] = festival_information[artist_data]
 
         return self.sort_artist_conflicts(liked_artist_dictionary)
 

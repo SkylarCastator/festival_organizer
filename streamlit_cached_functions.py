@@ -3,33 +3,20 @@ import pandas as pd
 
 
 @st.cache_data
-def show_spotify_playlist_data(_spotify_manager, spotify_user, _fest_info):
+def get_playlist_data(_spotify_manager, spotify_user, _fest_info):
     playlist_data = _spotify_manager.search_spotify_playlists(spotify_user, _fest_info.get_all_artist())
-    data = {
-        'Artist': [],
-        '# Songs': [],
-        'Playlist': []
-    }
-    for artist in playlist_data:
-        if playlist_data[artist] > 0:
-            data["Artist"].append(artist)
-            data["# Songs"].append(playlist_data[artist])
-            data["Playlist"].append("")
-
-    df = pd.DataFrame(data)
-    return df
-
+    return playlist_data
 
 @st.cache_data
-def generate_festival_solver_tables(_spotify_manger, spotify_user, _fest_info, show_dates, _festival_planner_instance):
+def generate_festival_solver_tables(playlist_data, _fest_info, show_dates, _festival_planner_instance):
     recommended_tables = {}
     conflict_tables = {}
     for date in show_dates:
         shows = _fest_info.get_shows_for_date(date)
-        playlist_day_data = _spotify_manger.search_spotify_playlists(spotify_user,
-                                                                    _fest_info.get_all_artist_for_date(
-                                                                    date))
-        recommended, conflicts = _festival_planner_instance.search_user_account(shows, playlist_day_data)
+        #playlist_day_data = _spotify_manger.search_spotify_playlists(spotify_user,
+        #                                                            _fest_info.get_all_artist_for_date(
+        #                                                            date))
+        recommended, conflicts = _festival_planner_instance.search_user_account(shows, playlist_data)
         recommended_data = {
             'Artist': [],
             'Start Time': [],

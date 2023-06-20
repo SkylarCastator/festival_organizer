@@ -70,7 +70,6 @@ class SpotifyManager:
         for artist in artists_to_search:
             playlist_count_data[artist] = 0
 
-        print("Please wait while we search your spotify account")
         for playlist in playlists:
             artist_information = self.search_playlist_for_artist(playlist, artists_to_search)
             for artist_data in artist_information:
