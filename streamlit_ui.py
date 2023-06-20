@@ -106,10 +106,14 @@ class StreamlitUI:
             '# Songs': [],
             'Playlist': []
         }
+        artist_list = []
         for artist in playlist_data:
-            if playlist_data[artist] > 0:
-                data["Artist"].append(artist)
-                data["# Songs"].append(playlist_data[artist])
+            artist_list.append((artist, playlist_data[artist]))
+        artist_list.sort(reverse=True, key=lambda x: (x[1]))
+        for artist in artist_list:
+            if artist[1] > 0:
+                data["Artist"].append(artist[0])
+                data["# Songs"].append(artist[1])
                 data["Playlist"].append("")
 
         df = pd.DataFrame(data)
