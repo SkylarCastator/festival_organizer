@@ -10,6 +10,10 @@ class StreamlitUI:
         self.festival_planner_instance = None
         self.file_path = f"festival_data/edc_2023.json"
         self.spotify_user = "aerialchemist"
+        self.spotify_manger = SpotifyManager(st.secrets["spotify_client_id"], st.secrets["spotify_client_secret"])
+
+        self.fest_info = festival_infromation.FestivalInformation()
+        self.fest_info.load_concert_details(self.file_path)
 
         st.title("Festival Planner")
         st.write("""This tool helps users search through their Spotify 
@@ -17,12 +21,7 @@ class StreamlitUI:
                      based on their preferences""")
 
         self.sidebar()
-
-        self.fest_info = festival_infromation.FestivalInformation()
-        self.fest_info.load_concert_details(self.file_path)
         self.show_festival_information()
-
-        self.spotify_manger = SpotifyManager(st.secrets["spotify_client_id"], st.secrets["spotify_client_secret"])
         self.show_spotify_infromation()
 
     def sidebar(self):
@@ -98,7 +97,12 @@ class StreamlitUI:
                                                                                show_dates,
                                                                                self.festival_planner_instance)
         selected_graph = expander.selectbox("Planner Date", list(show_dates))
+
+        expander.write(
+            "Shows with no conflicts")
         expander.table(recommended_tables[selected_graph])
+        expander.write(
+            "Shows with conflicts")
         expander.table(conflict_tables[selected_graph])
 
 
